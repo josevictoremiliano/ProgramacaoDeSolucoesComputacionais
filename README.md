@@ -29,10 +29,10 @@ Criar um portfólio online do seu trabalho.
 
 Crie um fork se achar melhor
 
-Clone o repositório para o seu computador.
-Crie uma nova pasta para cada aula.
-Adicione os seus arquivos de código, relatórios e outros materiais na pasta da aula correspondente.
-Faça commit das suas alterações e envie para o repositório remoto.
+1. Clone o repositório para o seu computador.
+2. Crie uma nova pasta para cada aula.
+3. Adicione os seus arquivos de código, relatórios e outros materiais na pasta da aula correspondente.
+4. Faça commit das suas alterações e envie para o repositório remoto.
 
 ### Observações:
 
@@ -42,6 +42,7 @@ Se tiver dúvidas, entre em contato com o professor ou com seus colegas.
 
 ### Exemplo de Estrutura de Pastas:
 
+```shell
 ├── README.md
 └── Java
     ├── atividade01
@@ -50,9 +51,10 @@ Se tiver dúvidas, entre em contato com o professor ou com seus colegas.
     └── atividade02
         ├── ... (Arquivos da atividade)
         └── ...
+```
 
 ### Exemplo de Arquivo README.md para uma Aula:
-
+```markdow
 # Atividade 01: REF. Aula_01
 
 ## Objetivos
@@ -68,5 +70,5 @@ Se tiver dúvidas, entre em contato com o professor ou com seus colegas.
 
 * Data: [Data de entrega]
 * Hora: [Hora de entrega]
-
-Espero que este repositório seja útil para você!
+```
+### Espero que este repositório seja útil para você!
