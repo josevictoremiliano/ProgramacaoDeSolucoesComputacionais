@@ -9,12 +9,24 @@ public class LeiaSegundosETransformeEmHorasMinutosESegundos {
         System.out.println("Informe a quantidade de segundos: ");
         int segundos = entrada.nextInt();
 
+        int[] tempo  = teste(segundos);
+        
+        System.out.println("O tempo informado em horas, minutos e segundos é: " + tempo[0] + " horas, " + tempo[1] + " minutos e " + tempo[2] + " segundos");
+
+
+        entrada.close();
+    }
+
+    public static int[] teste(int segundos) {
         int horas = segundos / 3600;
         int minutos = (segundos % 3600) / 60;
         int segundosRestantes = (segundos % 3600) % 60;
 
-        System.out.println("O valor de " + segundos + " segundos é igual a " + horas + " horas, " + minutos + " minutos e " + segundosRestantes + " segundos.");
+        int[] tempo = {horas, minutos, segundosRestantes};
 
-        entrada.close();
+        return tempo;
     }
+
+    
+
 }
