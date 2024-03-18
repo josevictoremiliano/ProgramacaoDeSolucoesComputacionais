@@ -2,7 +2,7 @@
 ## Repositório de Atividades: Programação de Soluções Computacionais
 ### Curso: Análise e Desenvolvimento de Sistemas - UNP - 2024.1
 
-Semestre: 1º Semestre
+Semestre: 1º Semestre 
 
 Matéria: Programação de Soluções Computacionais
 
