@@ -8,6 +8,8 @@ public class Main {
         System.out.println("2 - Questão 2");
         System.out.println("3 - Questão 3");
         System.out.println("4 - Questão 4");
+        System.out.println("4 - Questão 7");
+        
 
         int opcao = 1;
 
@@ -22,6 +24,9 @@ public class Main {
                 Questao3.main(args);
                 break;
             case 4:
+                Questao4.main(args);
+                break;
+            case 7:
                 Questao4.main(args);
                 break;
             default:
