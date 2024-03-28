@@ -20,7 +20,6 @@ public class Questao01 {
         }
 
         System.out.println("Nota válida: " + nota);
-        entrada.close();
         
     }
     

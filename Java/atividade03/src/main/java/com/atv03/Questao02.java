@@ -30,6 +30,5 @@ public class Questao02 {
         System.out.println("Senha: " + senha);
         System.out.println("\033[42;1;37m" + "------Senha salvada com sucesso!-------" + "\033[0m");
         // \033[42;1;37m -> Cor de fundo verde.
-        entrada.close();
     }
 }
