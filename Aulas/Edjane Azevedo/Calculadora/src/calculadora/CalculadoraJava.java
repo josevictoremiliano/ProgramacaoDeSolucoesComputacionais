@@ -70,11 +70,12 @@ public class CalculadoraJava extends javax.swing.JFrame {
             }
         });
 
-        Calculadora.setAlignment(1);
+        Calculadora.setAlignment(java.awt.Label.CENTER);
         Calculadora.setText("Calculadora");
 
         Visor.setBackground(new java.awt.Color(12, 12, 12));
         Visor.setForeground(new java.awt.Color(255, 255, 255));
+        Visor.setFocusable(false);
         Visor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VisorActionPerformed(evt);
@@ -192,7 +193,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Visor, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +230,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
                                 .addComponent(multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(Calculadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -239,7 +240,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
                 .addComponent(Visor, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Number7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Number8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -262,7 +263,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
                     .addComponent(Number0, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(igual, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -277,39 +278,39 @@ public class CalculadoraJava extends javax.swing.JFrame {
     }//GEN-LAST:event_VisorActionPerformed
 
     private void Number0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number0ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(0));
+        Visor.setText(Visor.getText() + String.valueOf("0"));
     }//GEN-LAST:event_Number0ActionPerformed
 
     private void Number1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number1ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(1));
+        Visor.setText(Visor.getText() + String.valueOf("1"));
     }//GEN-LAST:event_Number1ActionPerformed
 
     private void Number2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number2ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(2));
+        Visor.setText(Visor.getText() + String.valueOf("2"));
     }//GEN-LAST:event_Number2ActionPerformed
 
     private void Number3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number3ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(3));
+        Visor.setText(Visor.getText() + String.valueOf("3"));
     }//GEN-LAST:event_Number3ActionPerformed
 
     private void Number4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number4ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(4));
+        Visor.setText(Visor.getText() + String.valueOf("4"));
     }//GEN-LAST:event_Number4ActionPerformed
 
     private void Number5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number5ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(5));
+        Visor.setText(Visor.getText() + String.valueOf("5"));
     }//GEN-LAST:event_Number5ActionPerformed
 
     private void Number6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number6ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(6));
+        Visor.setText(Visor.getText() + String.valueOf("6"));
     }//GEN-LAST:event_Number6ActionPerformed
 
     private void Number7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number7ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(7));
+        Visor.setText(Visor.getText() + String.valueOf("7"));
     }//GEN-LAST:event_Number7ActionPerformed
 
     private void Number8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number8ActionPerformed
-        Visor.setText(Visor.getText() + String.valueOf(8));
+        Visor.setText(Visor.getText() + String.valueOf("8"));
     }//GEN-LAST:event_Number8ActionPerformed
 
     private void Number9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Number9ActionPerformed
@@ -348,6 +349,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
         double resultado = 0;
         if(sinal == "soma"){
             resultado = valor1 + valor2;
+            System.out.println(valor1 + valor2 + resultado);
         }
         if(sinal == "subtracao"){
             resultado = valor1 - valor2;
