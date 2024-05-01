@@ -25,6 +25,16 @@ public class CalculadoraJava extends javax.swing.JFrame {
 
     String sinal = "";
 
+    private String getFormattedSymbol(String sinal) {
+        return switch (sinal) {
+            case "soma" -> "+";
+            case "subtracao" -> "-";
+            case "divisao" -> "/";
+            case "multiplicacao" -> "*";
+            default -> sinal;
+        };
+    }
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -66,6 +76,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
         setTitle("Calculadora Simples");
         setBackground(new java.awt.Color(12, 12, 12));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setResizable(false);
 
         jButton1.setText("Limpar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +89,9 @@ public class CalculadoraJava extends javax.swing.JFrame {
         Calculadora.setText("Calculadora");
 
         Visor.setBackground(new java.awt.Color(12, 12, 12));
+        Visor.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         Visor.setForeground(new java.awt.Color(255, 255, 255));
+        Visor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Visor.setFocusable(false);
         Visor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,7 +206,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
 
         historicoView.setEditable(false);
         historicoView.setColumns(20);
-        historicoView.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        historicoView.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         historicoView.setLineWrap(true);
         historicoView.setRows(5);
         historicoView.setToolTipText("");
@@ -210,13 +223,13 @@ public class CalculadoraJava extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Calculadora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 65, Short.MAX_VALUE)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,13 +265,16 @@ public class CalculadoraJava extends javax.swing.JFrame {
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(multiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(divisao, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                            .addComponent(Visor, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                            .addComponent(Visor))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE))
-                        .addGap(20, 20, 20)))
-                .addGap(0, 0, 0))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                                .addContainerGap(12, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1)
+                                .addGap(89, 89, 89))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,9 +311,9 @@ public class CalculadoraJava extends javax.swing.JFrame {
                             .addComponent(igual, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
@@ -353,43 +369,34 @@ public class CalculadoraJava extends javax.swing.JFrame {
 
     private void somaActionPerformed(java.awt.event.ActionEvent evt) {
         valor1 = Double.parseDouble(Visor.getText());
-        Visor.setText("");
         sinal = "soma";
+        Visor.setText(valor1 + " " + getFormattedSymbol(sinal) + " ");
     }
     
     private void subtracaoActionPerformed(java.awt.event.ActionEvent evt) {
         valor1 = Double.parseDouble(Visor.getText());
-        Visor.setText("");
         sinal = "subtracao";
+        Visor.setText(valor1 + " " + getFormattedSymbol(sinal) + " ");
     }
     
     private void divisaoActionPerformed(java.awt.event.ActionEvent evt) {
         valor1 = Double.parseDouble(Visor.getText());
-        Visor.setText("");
         sinal = "divisao";
+        Visor.setText(valor1 + " " + getFormattedSymbol(sinal) + " ");
     }
     
     private void multiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {
         valor1 = Double.parseDouble(Visor.getText());
-        Visor.setText("");
         sinal = "multiplicacao";
+        Visor.setText(valor1 + " " + getFormattedSymbol(sinal) + " ");
     }
     
     StringBuilder historyBuilder = new StringBuilder();
-
-    private String getFormattedSymbol(String sinal) {
-        return switch (sinal) {
-            case "soma" -> "+";
-            case "subtracao" -> "-";
-            case "divisao" -> "/";
-            case "multiplicacao" -> "*";
-            default -> sinal;
-        };
-    }
     
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
-        valor2 = Double.parseDouble(Visor.getText());
+        String[] parts = Visor.getText().split(" ");
+        valor2 = Double.parseDouble(parts[2]);
         
         double resultado = 0;
         if(sinal.equals("soma")){
@@ -404,7 +411,7 @@ public class CalculadoraJava extends javax.swing.JFrame {
         if(sinal.equals("divisao")){
             resultado = valor1 / valor2;
         }
-        Visor.setText(String.valueOf(resultado));
+        Visor.setText(valor1 + " " + getFormattedSymbol(sinal) + " " + valor2 + " = " + resultado);
 
         // Append operation to history
         historyBuilder.append(valor1 + " " + getFormattedSymbol(sinal) + " " + valor2 + " = " + resultado + "\n");
