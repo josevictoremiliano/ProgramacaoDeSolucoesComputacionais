@@ -23,13 +23,21 @@
 
 ######  Para converter 373 para binário:
 > 373/2 = 186 resto 1
- Quociente: 93, Resto: 0
- Quociente: 46, Resto: 1
- Quociente: 23, Resto: 1
- Quociente: 11, Resto: 1
- Quociente: 5, Resto: 1
- Quociente: 2, Resto: 0
- Quociente: 1, Resto: 1
+
+>  Quociente: 93, Resto: 0
+
+> Quociente: 46, Resto: 1
+
+> Quociente: 23, Resto: 1
+
+> Quociente: 11, Resto: 1
+ 
+ > Quociente: 5, Resto: 1
+ 
+ > Quociente: 2, Resto: 0
+ 
+ > Quociente: 1, Resto: 1
+
 > Quociente: 0, Resto: 1
 
 373 em binário é 101110101
