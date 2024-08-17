@@ -8,8 +8,6 @@
 * Hexadecimal [0-9 e A - F])
 ------------
 
-[========]
-
 ## Conversão de binário para decimal
 
 [![Usando a notação posicional](https://www.wikihow.com/images/thumb/a/ae/Convert-from-Binary-to-Decimal-Step-1-Version-6.jpg/v4-728px-Convert-from-Binary-to-Decimal-Step-1-Version-6.jpg "Usando a notação posicional")](https://www.wikihow.com/images/thumb/a/ae/Convert-from-Binary-to-Decimal-Step-1-Version-6.jpg/v4-728px-Convert-from-Binary-to-Decimal-Step-1-Version-6.jpg "Usando a notação posicional")
@@ -42,7 +40,6 @@
 
 373 em binário é 101110101
 
-[========]
 
 
 
